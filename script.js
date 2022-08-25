@@ -29,13 +29,32 @@
     document.getElementById("make_seed").style.display = "none";
     document.getElementById("guess_answer").style.display = "block";
   }
-
+  function leap_year(y){
+    if(y%4==0&&y%100!=0||y%400==0){
+      return 1;
+    }
+    else{
+      return 0;
+    }
+  }
   function cnt_seed(){
+    var days = [0,31,28,31,30,31,30,31,31,30,31,30,31];
     var year = parseInt(document.getElementById("year").value);
     var month = parseInt(document.getElementById("month").value);
     var day = parseInt(document.getElementById("day").value);
-    var sd = (f(year)+g(month)+q(day))%48763;
-    document.getElementById("seeds").innerHTML = sd;
+    if(leap_year(year)){
+      days[3] = 29;
+    }
+    if(month<=0||month>12){
+      document.getElementById("seeds").innerHTML = "48763";
+    }
+    else if(day<=0||day>days[month]){
+      document.getElementById("seeds").innerHTML = "48763";
+    }
+    else{
+      var sd = (f(year)+g(month)+q(day))%48763;
+      document.getElementById("seeds").innerHTML = sd;
+    }
   }
   function cnt() {
     //get data from element
