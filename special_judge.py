@@ -4,9 +4,12 @@ import datetime
 import codecs
 
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
-x1 = datetime.datetime.now().year
-x2 = datetime.datetime.now().month
-x3 = datetime.datetime.now().day
+datetime_now = datetime.datetime.now()
+time_range = datetime.timedelta(hours = 8)
+new_time =datetime_now+time_range
+x1 = new_time.year
+x2 = new_time.month
+x3 = new_time.day
 
 def f(x:int):
     x = x%30000
@@ -54,7 +57,8 @@ def main(argv):
             return
         answer_array = [4,8,7,6,3,4,8,7,6,3,4,8,7,6,3,4,8,7,6,3,4,8,7,6,3]
         total = 0
-        for i in out.strip():
+        out = out.replace('\n','')
+        for i in out:
             total += ord(i)
             answer_array.append(ord(i))
 
