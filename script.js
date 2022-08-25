@@ -43,7 +43,7 @@
     var month = parseInt(document.getElementById("month").value);
     var day = parseInt(document.getElementById("day").value);
     if(leap_year(year)){
-      days[3] = 29;
+      days[2] = 29;
     }
     if(month<=0||month>12){
       document.getElementById("seeds").innerHTML = "48763";
