@@ -16,7 +16,7 @@
 
 ![image](https://media.discordapp.net/attachments/713379026487476235/1012578973592604712/unknown.png?width=1440&height=494)
 
-點擊測試句子後，擊可測試哪些字串是有可能AC的：
+點擊測試句子後，即可測試哪些字串是有可能AC的：
 
 ![image](https://media.discordapp.net/attachments/713379026487476235/1012579001992233002/unknown.png?width=1440&height=373)
 
