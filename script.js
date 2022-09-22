@@ -1,11 +1,13 @@
+
+  
   function f(x) {
     x = x%30000;
-    return Math.floor(((x * x) + 87 - Math.floor(x / 3) - (x % 7)) % 48763);
+    return Math.floor(((x * x) + 87 - Math.floor(x / 3) - (x % 7)+48763*10) % 48763);
   }
   
   function g(x) {
     x = x%30000;
-    return Math.floor(((x - 1) * (x + 2) + Math.floor(x / 4) - (x % 3)) % 48763);
+    return Math.floor(((x - 1) * (x + 2) + Math.floor(x / 4) - (x % 3)+48763*10) % 48763);
   }
   
   function q(x) {
@@ -59,7 +61,8 @@
   function cnt() {
     //get data from element
     var seed = parseInt(document.getElementById("seed").value);
-    var guess = document.getElementById("guess").value;
+    var old_guess = document.getElementById("guess").value;
+    var guess = [...old_guess];
     var answer_array = [4, 8, 7, 6, 3, 4, 8, 7, 6, 3, 4, 8, 7, 6, 3, 4, 8, 7, 6, 3, 4, 8, 7, 6, 3];
     //console.log(answer_array);
     var total = 0;
