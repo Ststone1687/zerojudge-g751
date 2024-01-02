@@ -1280,7 +1280,7 @@ pre {
 </span>
 <br>
 				通過比率
-				: <span title="解題統計"> <a href="https://zerojudge.tw/Submissions?problemid=g751&amp;status=AC" title="不重複的通過人數">421人</a>/<a href="https://zerojudge.tw/Submissions?problemid=g751" title="不重複的嘗試解題人數">638人 </a>
+				: <span title="解題統計"> <a href="https://zerojudge.tw/Submissions?problemid=g751&amp;status=AC" title="不重複的通過人數">48763人</a>/<a href="https://zerojudge.tw/Submissions?problemid=g751" title="不重複的嘗試解題人數">48763人 </a>
 					
 						
 						(
@@ -2083,6 +2083,52 @@ pre {
 			</div>
 		</div>
 		<br>
+		<div id="reports" class="row reports" style="display: block">
+			<div class="col-md-12">
+				<table class="table table-hover">
+					<tbody><tr>
+						<td>編號</td>
+						<td>身分</td>
+						<td>
+								題目
+							</td>
+						<td width="50%">主題</td>
+						<td>人氣</td>
+						<td width="18%">發表日期</td>
+					</tr>
+
+					
+						
+						
+							<tr>
+								<td colspan="6"><div align="center">沒有發現任何「解題報告」</div></td>
+							</tr>
+						
+					
+				</tbody></table>
+			</div>
+		</div>
+		<div id="make_seed"  class="make_seed" style="display: none">
+			<a>種子：</a><br>
+			<a id="seeds">0</a><br>
+			<a>年份</a><br>
+			<input id="year" value="2000"><br>
+			<a>月</a><br>
+			<input id="month" value="1"><br>
+			<a>日</a><br>
+			<input id="day" value="1"><br>
+			<button onclick="cnt_seed()">計算</button>
+		</div>
+		<div id="guess_answer"  class="guess_answer" style="display: none">
+			<a>分數：</a><br>
+			<a id="score">0</a><br>
+			<a>種子：</a><br>
+			<input id="seed" value="0"><br>
+			<a>測試句子：</a><br>
+			<input id="guess" value="becaidorz"><br>
+			<button onclick="cnt()">計算</button>
+		</div>
+		<script src="/zerojudge-g751/script.js"></script>
 		
 			
 		
