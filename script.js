@@ -74,10 +74,10 @@
     }
     //console.log(answer_array);
     total = (f(total) + g(total) + q(total)) % 48763;
-    console.log(total);
+    //console.log(total);
     for (var i = 0; i < answer_array.length; i++) {
       var swap_seed = (seed + f(total) + g(total) + q(total));
-      console.log(swap_seed);
+      //console.log(swap_seed);
       if (i % 3 == 0) {
         swap_seed = (swap_seed + f(answer_array[i]+ seed) ) % 48763;
       }
@@ -87,15 +87,15 @@
       else {
         swap_seed = (swap_seed + q(answer_array[i])) % 48763;
       }
-      console.log(swap_seed);
+      //console.log(swap_seed);
       var px = i;
       var py = (f(swap_seed) + g(swap_seed + seed) + q(swap_seed + seed)) % answer_array.length;
       var temp = answer_array[py];
       answer_array[py] = answer_array[px];
       answer_array[px] = temp;
-      console.log(px);
-      console.log(py);
-      console.log("-----");
+      //console.log(px);
+      //console.log(py);
+      //console.log("-----");
     }
     var score = 0;
     for (var i = 0; i < answer_array.length; i++) {
@@ -111,7 +111,7 @@
           }
       //
     }
-    console.log(answer_array);
+    //console.log(answer_array);
     document.getElementById("score").innerHTML = (score/487.63).toFixed(2);
   }
   //
