@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0047)https://zerojudge.tw/ShowProblem?problemid=g751 -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-
+	
+	
+	
 
 
 
@@ -134,35 +134,73 @@ span#acstyle {
 	font-family: Consolas, 'Courier New', monospace;
 }
 
+.ProblemManagerOnly {
+	background: url(images/bgcode.gif);
+	border: 1px solid #F0F0F0;
+	border-left: 6px solid #39F;
+	color: #555;
+	/* display: block; */
+	font: normal 1em "Lucida Sans Unicode", serif;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: normal;
+}
+
+.ForumManagerOnly {
+	background: url(images/bgcode.gif);
+	border: 1px solid #F0F0F0;
+	border-left: 0.5em solid rgb(124, 180, 132);
+	color: #555;
+	/* display: block; */
+	/* font: normal 1em "Lucida Sans Unicode", serif; */
+	font-family: Consolas, 'Courier New', monospace;
+	margin-bottom: 0.5em;
+	/* padding: 8px 10px; */
+	white-space: normal;
+}
+
+.ManagerOnly {
+	background: url(images/bgcode.gif);
+	border: 1px solid #F0F0F0;
+	border-left: 6px solid rgb(132, 3, 3);
+	color: #555;
+	/* display: block; */
+	/* font: normal 1em "Lucida Sans Unicode", serif; */
+	font-family: Consolas, 'Courier New', monospace;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: normal;
+}
+
 </style>
 
 <title>g751. 聽說只有5%的人能通過這題 - 高中生程式解題系統</title>
 
 
-<script type="text/javascript" src="/zerojudge-g751/datas/ShowProblem.js.下載"></script>
-<script type="text/javascript" src="/zerojudge-g751/datas/Modal_ProblemSetting.js.下載"></script>
-<script type="text/javascript" src="/zerojudge-g751/datas/ModalBody_ProblemSetting.js.下載"></script>
-<script type="text/javascript" src="/zerojudge-g751/datas/ProblemToolbar.js.下載"></script>
-<script type="text/javascript" src="/zerojudge-g751/datas/DivProblemStatusInfo.js.下載"></script>
-<script type="text/javascript" src="/zerojudge-g751/datas/ProblemTags.js.下載"></script>
-<script type="text/javascript" src="/zerojudge-g751/datas/Modal_RejudgeProblem.js.下載"></script>
+	<script type="text/javascript" src="/zerojudge-g751/datas/ShowProblem.js.下載"></script>
+	<script type="text/javascript" src="/zerojudge-g751/datas/Modal_ProblemSetting.js.下載"></script>
+	<script type="text/javascript" src="/zerojudge-g751/datas/ModalBody_ProblemSetting.js.下載"></script>
+	<script type="text/javascript" src="/zerojudge-g751/datas/ProblemToolbar.js.下載"></script>
+	<script type="text/javascript" src="/zerojudge-g751/datas/DivProblemStatusInfo.js.下載"></script>
+	<script type="text/javascript" src="/zerojudge-g751/datas/ProblemTags.js.下載"></script>
+	<script type="text/javascript" src="/zerojudge-g751/datas/Modal_RejudgeProblem.js.下載"></script>
 
-<script>
-MathJax = {
-	tex: {
-		inlineMath: [['$', '$'], ['\\(', '\\)']]
-	}
-};
-</script>
-<script src="/zerojudge-g751/datas/tex-mml-chtml.js.下載" id="MathJax-script" async=""></script>
-<!-- <script type="text/javascript" id="MathJax-script" async
+	<script>
+		MathJax = {
+			tex: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']]
+			}
+		};
+	</script>
+	<script src="/zerojudge-g751/datas/tex-mml-chtml.js.下載" id="MathJax-script" async=""></script>
+	<!-- <script type="text/javascript" id="MathJax-script" async
 	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 
-<script type="text/javascript">
-	jQuery(document).ready(function () {
+	<script type="text/javascript">
+		jQuery(document).ready(function () {
 
-	});
-</script>
+		});
+	</script>
 
 <style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
 .CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
@@ -821,7 +859,7 @@ pre {
 	word-break: normal;
 }
 
-.bg-debuger {
+.bg-debugger {
 	background: rgb(247, 177, 177); background-image: repeating-linear-gradient(30deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.1)15px, transparent 0,transparent 30px);
 }
 
@@ -844,7 +882,58 @@ pre {
 
 
 
+<div class="modal fade" id="Modal_SetUserPassword" role="dialog" tabindex="-1" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">解除綁定，重新設定系統帳號的密碼</h4>
+			</div>
+			<div class="modal-body">
 
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="tname" class="col-sm-3 control-label">您的系統帳號
+							ID：</label>
+						<div class="col-sm-9">
+							<input class="form-control" id="disabledInput" type="text" placeholder="" disabled="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tname" class="col-sm-3 control-label">您的系統帳號：</label>
+						<div class="col-sm-9">
+							<input class="form-control" id="disabledInput" type="text" placeholder="" disabled="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tname" class="col-sm-3 control-label">您的帳號暱稱：</label>
+						<div class="col-sm-9">
+							<input class="form-control" id="disabledInput" type="text" placeholder="" disabled="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tname" class="col-sm-3 control-label">設定新密碼：</label>
+						<div class="col-sm-9">
+							<input type="password" class="form-control" name="UserPassword1" placeholder="設定新密碼" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tname" class="col-sm-3 control-label">設定新密碼：</label>
+						<div class="col-sm-9">
+							<input type="password" class="form-control" name="UserPassword2" placeholder="再打一次新密碼" value="">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary" id="modal_setUserPassword_submit" data-action="UnbindGoogle" data-contextpath="" data-userid="124999">設定</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
@@ -1045,9 +1134,7 @@ pre {
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="搜尋題目關鍵字、題號..." name="searchword"> <span class="input-group-btn">
 							<button class="btn btn-default" type="submit">
-
-									<img src="https://media.discordapp.net/attachments/713379026487476235/1012372084313305179/unknown.png?width=683&height=663" width="15" height="15">
-
+								<img src="https://media.discordapp.net/attachments/713379026487476235/1012372084313305179/unknown.png?width=683&height=663" width="15" height="15">
 							</button>
 						</span>
 					</div>
@@ -1078,6 +1165,16 @@ pre {
 									<li><a href="https://zerojudge.tw/Logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
 											登出
 										</a></li>
+									<li role="separator" class="divider"></li>
+									
+										<li><a href="https://zerojudge.tw/EditContests"><i class="fa fa-certificate"></i> 競賽管理</a></li>
+									
+									
+										<li><a href="https://zerojudge.tw/EditProblems"><i class="fa fa-certificate"></i> 題目管理</a></li>
+									
+									
+										<li><a href="https://zerojudge.tw/ShowVClasses"><i class="fa fa-certificate"></i> 課程管理</a></li>
+									
 									
 									<li role="separator" class="divider"></li>
 									<!-- <li><a href="#"><IMG SRC="/images/flags/Unknown.gif"></a></li> -->
@@ -1096,6 +1193,10 @@ pre {
 									
 										<li>
 											 <a href="https://zerojudge.tw/ShowProblem?problemid=g751#">已參加的課程</a>
+												<ul>
+													
+														
+												</ul>
 										</li>
 									
 	
@@ -1120,7 +1221,7 @@ pre {
 <br>
 
 	<div class="container">
-		<div class="row">
+		<div class="row Consolas">
 			<div class="col-md-2">
 				
 					<a href="https://zerojudge.tw/Problems?tabid=ORIGINAL">回『原創/不分類題庫』</a>
@@ -1136,7 +1237,7 @@ pre {
 
 
 
-				<div class="h1">g751:
+				<div class="h1">g751. 
 					<span id="problem_title">聽說只有5%的人能通過這題</span>
 				</div>
 			</div>
@@ -1168,24 +1269,28 @@ pre {
 }
 </style>
 <span class="tag"> 
-	<a href="https://zerojudge.tw/Problems?tag=hash">hash</a>
-
-	<a href="https://zerojudge.tw/Problems?tag=解謎">解謎</a>
-
-	<a href="https://zerojudge.tw/Problems?tag=通靈">通靈</a>
-
+		<a href="https://zerojudge.tw/Problems?tag=hash">hash</a>
+	
+		<a href="https://zerojudge.tw/Problems?tag=%E8%A7%A3%E8%AC%8E">解謎</a>
+	
+		<a href="https://zerojudge.tw/Problems?tag=%E9%80%9A%E9%9D%88">通靈</a>
+	
 </span>
 <br>
 				通過比率
-				: <span title="解題統計"> <a href="https://zerojudge.tw/Submissions?problemid=g751&amp;status=AC" title="不重複的通過人數">48763人</a>/<a href="https://zerojudge.tw/Submissions?problemid=g751" title="不重複的嘗試解題人數">48763人 </a> 
-						(100%)
+				: <span title="解題統計"> <a href="https://zerojudge.tw/Submissions?problemid=g751&amp;status=AC" title="不重複的通過人數">48763人</a>/<a href="https://zerojudge.tw/Submissions?problemid=g751" title="不重複的嘗試解題人數">48763人 </a>
+					
+						
+						(
+							100%
+							)
 						
 					
-				</span>[非即時]<br> 評分方式：
-				<div class="btn btn-warning btn-xs">Special</div>
-				<br> 最近更新 :
-				2000-13-32 24:61
-				<br> <br>
+						</span>[非即時]<br> 評分方式：
+						<div class="btn btn-warning btn-xs">Special</div>
+						<br> 最近更新 :
+						2000-13-32 24:61
+						<br> <br>
 				
 				
 				
@@ -1299,67 +1404,12 @@ pre {
 <div class="row">
 	<div class="col-lg-12">
 		<div class="input-group">
-			<span class="input-group-addon" id="sizing-addon2">標籤</span> <input type="text" class="form-control" placeholder="輸入題目標籤" title="輸入題目標籤" name="backgrounds" value="[]">
+			<span class="input-group-addon" id="sizing-addon2">標籤</span> <input type="text" class="form-control" placeholder="輸入題目標籤" title="輸入題目標籤" name="backgrounds" value="[hash, 解謎, 通靈]">
 			<span class="input-group-btn">
 				<button class="btn btn-default" type="button" id="clean_background">清除</button>
 			</span>
 		</div>
-		<small> 請用 , 隔開。請為您的題目加上「標籤」，會更容易讓使用者找到。比如 [GCD, DP, 最短路徑] [ 
-				<span id="background" class="FakeLink">Greedy</span>
-			
-				<span id="background" class="FakeLink">binary search</span>
-			
-				<span id="background" class="FakeLink">ctime</span>
-			
-				<span id="background" class="FakeLink">datetime</span>
-			
-				<span id="background" class="FakeLink">dfs</span>
-			
-				<span id="background" class="FakeLink">dp</span>
-			
-				<span id="background" class="FakeLink">dsu</span>
-			
-				<span id="background" class="FakeLink">games</span>
-			
-				<span id="background" class="FakeLink">greedy</span>
-			
-				<span id="background" class="FakeLink">java.util.Date</span>
-			
-				<span id="background" class="FakeLink">math</span>
-			
-				<span id="background" class="FakeLink">sort</span>
-			
-				<span id="background" class="FakeLink">time</span>
-			
-				<span id="background" class="FakeLink">٩(ˊᗜˋ*)و</span>
-			
-				<span id="background" class="FakeLink">互動題</span>
-			
-				<span id="background" class="FakeLink">優化</span>
-			
-				<span id="background" class="FakeLink">同餘</span>
-			
-				<span id="background" class="FakeLink">幾何</span>
-			
-				<span id="background" class="FakeLink">快速冪</span>
-			
-				<span id="background" class="FakeLink">情人節</span>
-			
-				<span id="background" class="FakeLink">數學</span>
-			
-				<span id="background" class="FakeLink">數論基礎</span>
-			
-				<span id="background" class="FakeLink">明明</span>
-			
-				<span id="background" class="FakeLink">板中資訊APCS班程式挑戰賽</span>
-			
-				<span id="background" class="FakeLink">線段樹</span>
-			
-				<span id="background" class="FakeLink">資料結構</span>
-			
-				<span id="background" class="FakeLink">遞迴</span>
-			 ]
-		</small>
+		
 	</div>
 </div>
 <!-- /input-group -->
@@ -1382,13 +1432,11 @@ pre {
 <div class="row">
 	<div class="col-lg-12">
 		<div class="input-group">
-			<span class="input-group-addon" id="sizing-addon2">出處</span> <input type="text" class="form-control" placeholder="輸入題目出處" title="輸入題目出處" name="reference" value="[]">
+			<span class="input-group-addon" id="sizing-addon2">出處</span> <input type="text" class="form-control" placeholder="輸入題目出處" title="輸入題目出處" name="reference" value="[Ststone]">
 			<span class="input-group-btn">
 				<button class="btn btn-default" type="button" id="clean_reference">清除</button>
 			</span>
 		</div>
-		<small> 出處請用 , 隔開，可作為標籤查詢。比如 [2013,高雄市,資訊學科能力,複賽] <br> <span>注意：出處請填寫完整，以免引起著作權爭議，可能的話，並請取得原作者同意再公開。</span>
-		</small>
 	</div>
 </div>
 
@@ -1440,19 +1488,49 @@ pre {
 
 	
 	
+		<!-- <i class="fa fa-cc" aria-hidden="true" title="練習題"></i> -->
+		<span class="glyphicon glyphicon-eye-close" title="練習題"></span>	
+	g751. <a href="https://zerojudge.tw/ShowProblem?problemid=g751" title="[hash, 解謎, 通靈]">聽說只有5%的人能通過這題</a>
 	
-		<span style="text-decoration: line-through;" title="隱藏題">
-			g751. <a href="https://zerojudge.tw/ShowProblem?problemid=g751" title="[]">聽說只有5%的人能通過這題</a>
-		</span>
 	
 
 
 
 
+
+	<span style="font-size: 0.8em; color: #AAAAAA"> -- 
+
+
+
+
+<style style="text/css">
+#reference a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#reference a:hover {
+	text-decoration: underline;
+	color: inherit;
+}
+
+#reference a:VISITED {
+	text-decoration: underline;
+	color: inherit;
+}
+</style>
+
+
+	
+	<span id="reference"><a href="https://zerojudge.tw/Problems?tag=Ststone">Ststone</a>
+	</span>
+
+
+	</span>
 
 
 							</label>
-							<pre id="code" class="language-python">print("我超強")</pre>
+							
 							
 						</div>
 					</div>
@@ -1576,8 +1654,7 @@ pre {
 </div>
 
 
-
-
+		
 	</div>
 
 
@@ -1594,16 +1671,15 @@ pre {
 							</div>
 							<div class="panel-body">
 								<div id="problem_content" class="problembox"><p><a href="https://www.youtube.com/watch?v=RDMg6DQAeYA" target="_blank" rel="nofollow noopener noreferrer">95%的人解決不了這題。</a></p>
-									<p>在歷經與Caido的100回大戰後，kenkenken終於習得了最終奧義「星光連流擊」。</p>
-									<p>但是為了施放「星光連流擊」，kenkenken還必須要撐10秒！</p>
-									<p>眼看正要擊敗Caido的瞬間，邪惡魔法師臨末之頌居然將kenkenken傳送到了編號「g751」的亞空間。</p>
-									<p>「汝阿，在搖擺之中選擇一扇命運之門吧！」</p>
-									<p><a href="https://zerojudge.tw/ShowProblem?problemid=g751" rel="nofollow">[--門--]</a>&nbsp;<a href="https://ststone1687.github.io/zerojudge-g751/main.html" rel="nofollow">[--門--]</a>&nbsp;<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="nofollow">[--門--]</a>&nbsp;<a href="https://zerojudge.tw/ShowProblem?problemid=g751" rel="nofollow">[--門--]</a> <a href="https://zerojudge.tw/ShowProblem?problemid=g751" rel="nofollow">[--門--]</a></p>
-									<p>「星爆來臨之時，仰望天體運行，為種之母。」</p>
-									<p>「以種彼開斗，鷗阿鸝演算之時，得欸兮乎。」</p>
-									<p>你能順利幫助kenkenken脫離亞空間並且順利擊敗Caido嗎？</p>
-									<p>&nbsp;</p>
-																	</div>
+<p>在歷經與Caido的100回大戰後，kenkenken終於習得了最終奧義「星光連流擊」。</p>
+<p>但是為了施放「星光連流擊」，kenkenken還必須要撐10秒！</p>
+<p>眼看正要擊敗Caido的瞬間，邪惡魔法師臨末之頌居然將kenkenken傳送到了編號「g751」的亞空間。</p>
+<p>「汝阿，在搖擺之中選擇一扇命運之門吧！」</p>
+<p><a href="https://zerojudge.tw/ShowProblem?problemid=g751" rel="nofollow">[--門--]</a>&nbsp;<a href="https://ststone1687.github.io/zerojudge-g751/main.html" rel="nofollow">[--門--]</a>&nbsp;<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="nofollow">[--門--]</a>&nbsp;<a href="https://zerojudge.tw/ShowProblem?problemid=g751" rel="nofollow">[--門--]</a> <a href="https://zerojudge.tw/ShowProblem?problemid=g751" rel="nofollow">[--門--]</a></p>
+<p>「星爆來臨之時，仰望天體運行，為種之母。」</p>
+<p>「以種彼開斗，鷗阿鸝演算之時，得欸兮乎。」</p>
+<p>你能幫助kenkenken脫離亞空間並且順利擊敗Caido嗎？</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1749,10 +1825,10 @@ pre {
 					<div class="col-md-6"></div>
 				</div>
  -->
- <div style="text-align: left; margin-bottom: 1em;">
-	<strong> 提示 ：
-	</strong><br>
-	<div id="problem_hint" class="problembox"><p><span style="background-color:rgb( 206 , 212 , 217 )">評分說明：</span></p>
+				<div style="text-align: left; margin-bottom: 1em;">
+					<strong> 提示 ：
+					</strong><br>
+					<div id="problem_hint" class="problembox"><p><span style="background-color:rgb( 206 , 212 , 217 )">評分說明：</span></p>
 <p><span style="background-color:rgb( 206 , 212 , 217 )">評分程式會根據你輸出的字串，給予你0到100的評分。</span></p>
 <p><span style="background-color:rgb( 206 , 212 , 217 )">若你獲得的分數<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="0" style="font-size: 117.4%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>X</mi></math></mjx-assistive-mml></mjx-container>大於<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="1" style="font-size: 117.4%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">(</mo><mn>10</mn><mi>t</mi><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>，那你可以通過第<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="2" style="font-size: 117.4%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math></mjx-assistive-mml></mjx-container>個測資點。</span></p>
 <p><span style="background-color:rgb( 206 , 212 , 217 )">換句話說，你的字串得分超過95分，你就會得到AC了喔！</span></p>
@@ -1760,10 +1836,10 @@ pre {
 <p><span style="background-color:rgb( 191 , 237 , 210 )">提示：或許你是可以送一次就AC的。</span></p>
 <p><span style="background-color:rgb( 248 , 202 , 198 )">更新：</span></p>
 <p><span style="background-color:rgb( 248 , 202 , 198 )">2022/08/26 公開此題目。</span></p>
-<p><span style="background-color:rgb( 248 , 202 , 198 )">2022/09/19 關於<a style="background-color:rgb( 248 , 202 , 198 )" href="https://zerojudge.tw/ShowThread?postid=31958&reply=31950#31958" target="_blank" rel="nofollow noopener noreferrer">此篇</a>所提出之Unicode 擴展字元之問題，已經於網頁中修復，不影響原評分程式之功能，意即於相同種子之情況下，與之前所送出之字串評分結果不會有任何變化，歡迎各位提出各種有趣之想法來討論。</span></p>
-<p><span style="background-color:rgb( 248 , 202 , 198 )">2022/09/19 更新題目敘述。</span></p></div>
-<p><span style="background-color:rgb( 194 , 224 , 244 )">2024/01/03 由於之前用的服務掛了，於是小更新換了一下，有遇到任何問題歡迎回報，另外祝各位新年快樂！</span></p>
-</div>
+<p><span style="background-color:rgb( 248 , 202 , 198 )">2022/09/19 關於<a style="background-color:rgb( 248 , 202 , 198 )" href="https://zerojudge.tw/ShowThread?postid=31958&amp;reply=31950#31958" target="_blank" rel="nofollow noopener noreferrer">此篇</a>所提出之Unicode 擴展字元之問題，已經於網頁中修復，不影響原評分程式之功能，意即於相同種子之情況下，與之前所送出之字串評分結果不會有任何變化，歡迎各位提出各種有趣之想法來討論。</span></p>
+<p><span style="background-color:rgb( 248 , 202 , 198 )">2022/09/19 更新題目敘述。</span></p>
+<p><span style="background-color:rgb( 194 , 224 , 244 )">2024/01/03 由於之前用的服務掛了，於是小更新換了一下，有遇到任何問題歡迎回報，另外祝各位新年快樂！</span></p></div>
+				</div>
 				<div style="text-align: left; margin-bottom: 1em;">
 					<strong> 標籤:
 					</strong>
@@ -1792,12 +1868,12 @@ pre {
 }
 </style>
 <span class="tag"> 
-	<a href="https://zerojudge.tw/Problems?tag=hash">hash</a>
-
-	<a href="https://zerojudge.tw/Problems?tag=解謎">解謎</a>
-
-	<a href="https://zerojudge.tw/Problems?tag=通靈">通靈</a>
-
+		<a href="https://zerojudge.tw/Problems?tag=hash">hash</a>
+	
+		<a href="https://zerojudge.tw/Problems?tag=%E8%A7%A3%E8%AC%8E">解謎</a>
+	
+		<a href="https://zerojudge.tw/Problems?tag=%E9%80%9A%E9%9D%88">通靈</a>
+	
 </span>
 
 					</div>
@@ -1826,9 +1902,12 @@ pre {
 	text-decoration: underline;
 	color: inherit;
 }
-</style><span id="reference"><a href="https://zerojudge.tw/Problems?tag=Ststone">Ststone</a>
-</span>
+</style>
 
+
+	
+	<span id="reference"><a href="https://zerojudge.tw/Problems?tag=Ststone">Ststone</a>
+	</span>
 
 
 
@@ -1851,10 +1930,10 @@ pre {
 	
 		<span style="display: inline-block;">
 			
-			<span><a href="https://zerojudge.tw/UserStatistic?id=124999" title="Ststone1687">Ststone1687</a></span><span title="使用C++的都邪教">(使用C++的都邪教)</span>
-			
+			<span><a href="https://zerojudge.tw/UserStatistic?id=124999" title="Ststone1687">Ststone1687
+					
+				</a></span><span title="Ststone">(Ststone)</span>
 		</span>
-		
 	
 
 	
@@ -1876,6 +1955,8 @@ pre {
 				
 					<!-- 兩個 modal 有順序關係，不可倒反。 -->
 					<!-- 站長超強 orz。 -->
+					
+
 					<a onclick="action1()" type="button" class="btn btn-success">
 						解題報告
 					</a>
@@ -1893,56 +1974,160 @@ pre {
 					</a>
 					<a href="https://zerojudge.tw/BestSolutions?problemid=g751" type="button" class="btn btn-success">排行</a>
 					
+					
+
+
+
+
+
+<span id="VoteProblem">
+	<button id="recommendButton" type="button" class="btn btn-default" title="推" style="display:none;">
+		<i id="notVotedIcon" class="fa fa-thumbs-o-up" aria-hidden="true" style="display:none;"></i>
+		<i id="votedIcon" class="fa fa-thumbs-up" aria-hidden="true" style="display:none;"></i>
+		推
+	</button>
+
+
+	<!-- 		
+		<button id="notRecommendButton" type="button" class="btn btn-danger">不推薦</button>
+	 -->
+	<script>
+		console.log("problemid: g751");
+		let startElement = document.getElementById('recommendButton');
+		let closestDiv = startElement.closest('span');
+		//let targetElement = closestDiv.querySelector('#targetId');
+
+		// 檢查使用者是否已經投過票
+		fetch('./vote/problemid/g751')
+			.then(response => {
+				console.log("!!!response.status == ", response.status);
+				if (response.status === 200) {
+					closestDiv.querySelector('#recommendButton').style.display = ''; // 顯示按鈕
+					closestDiv.querySelector('#notVotedIcon').style.display = ''; // 顯示圖示
+					return response.json();
+				} else {
+					closestDiv.querySelector('#recommendButton').style.display = 'none'; // 不顯示按鈕
+					closestDiv.querySelector('#notVotedIcon').style.display = 'none'; // 不顯示圖示	
+					return response.json().then(err => {
+						throw new Error(err.message);
+					});
+				}
+			})
+			.then(data => {
+				if (data.id > 0) { // 已經投過票
+					closestDiv.querySelector('#notVotedIcon').style.display = 'none';
+					closestDiv.querySelector('#votedIcon').style.display = '';
+					closestDiv.querySelector('#recommendButton').disabled = true;
+					console.log("GET: /vote/problemid/g751 () 已經投完: data=", data);
+				} else {
+					console.log("problem#g751 () 可以投票: data=", data);
+				}
+			})
+			.catch((error) => {
+				console.error('Error:', error.message);
+			});
+
+		document.getElementById('recommendButton').addEventListener('click', function () {
+			var button = this; // 獲取當前按鈕對象
+			let voteData = {
+				problemid: 'g751',
+			};
+			console.log("voteData: ", voteData);
+			console.log("voteData.problemid: ", voteData.problemid);
+
+			fetch('./vote/problemid/', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(voteData)
+			})
+				.then(response => {
+					console.log("response.status == ", response.status);
+					if (response.status !== 200) {
+						return response.json().then(err => {
+							throw new Error(err.message);
+						});
+					}
+				})
+				.then(data => {
+					console.log("POST vote: ", data);
+					closestDiv.querySelector('#notVotedIcon').style.display = 'none';
+					closestDiv.querySelector('#votedIcon').style.display = '';
+					closestDiv.querySelector('#recommendButton').disabled = true;
+				})
+				.catch((error) => {
+					console.error('Error:', error);
+				});
+		});
+
+		closestDiv.querySelector('#notRecommendButton').addEventListener('click', function () {
+			fetch('./NotRecommend?problemid=g751')
+				.then(response => response.text())
+				.then(data => {
+					alert("不推薦成功！");
+				})
+				.catch((error) => {
+					alert("出錯了：" + error);
+				});
+		});
+	</script>
+
+</span>
+
 				
 			</div>
 		</div>
 		<br>
-			<div id="reports" class="row reports" style="display: block">
-				<div class="col-md-12">
-					<table class="table table-hover">
-						<tbody><tr>
-							<td>編號</td>
-							<td>身分</td>
-							<td>
-									題目
-								</td>
-							<td width="50%">主題</td>
-							<td>人氣</td>
-							<td width="18%">發表日期</td>
-						</tr>
+		<div id="reports" class="row reports" style="display: block">
+			<div class="col-md-12">
+				<table class="table table-hover">
+					<tbody><tr>
+						<td>編號</td>
+						<td>身分</td>
+						<td>
+								題目
+							</td>
+						<td width="50%">主題</td>
+						<td>人氣</td>
+						<td width="18%">發表日期</td>
+					</tr>
 
+					
 						
-							
-							
-								<tr>
-									<td colspan="6"><div align="center">沒有發現任何「解題報告」</div></td>
-								</tr>
-							
 						
-					</tbody></table>
-				</div>
+							<tr>
+								<td colspan="6"><div align="center">沒有發現任何「解題報告」</div></td>
+							</tr>
+						
+					
+				</tbody></table>
 			</div>
-			<div id="make_seed"  class="make_seed" style="display: none">
-				<a>種子：</a><br>
-				<a id="seeds">0</a><br>
-				<a>年份</a><br>
-				<input id="year" value="2000"><br>
-				<a>月</a><br>
-				<input id="month" value="1"><br>
-				<a>日</a><br>
-				<input id="day" value="1"><br>
-				<button onclick="cnt_seed()">計算</button>
-			</div>
-			<div id="guess_answer"  class="guess_answer" style="display: none">
-				<a>分數：</a><br>
-				<a id="score">0</a><br>
-				<a>種子：</a><br>
-				<input id="seed" value="0"><br>
-				<a>測試句子：</a><br>
-				<input id="guess" value="becaidorz"><br>
-				<button onclick="cnt()">計算</button>
-			</div>
-			<script src="/zerojudge-g751/script.js"></script>
+		</div>
+		<div id="make_seed"  class="make_seed" style="display: none">
+			<a>種子：</a><br>
+			<a id="seeds">0</a><br>
+			<a>年份</a><br>
+			<input id="year" value="2000"><br>
+			<a>月</a><br>
+			<input id="month" value="1"><br>
+			<a>日</a><br>
+			<input id="day" value="1"><br>
+			<button onclick="cnt_seed()">計算</button>
+		</div>
+		<div id="guess_answer"  class="guess_answer" style="display: none">
+			<a>分數：</a><br>
+			<a id="score">0</a><br>
+			<a>種子：</a><br>
+			<input id="seed" value="0"><br>
+			<a>測試句子：</a><br>
+			<input id="guess" value="becaidorz"><br>
+			<button onclick="cnt()">計算</button>
+		</div>
+		<script src="/zerojudge-g751/script.js"></script>
+		
+			
+		
 	</div>
 	
 
@@ -1965,15 +2150,15 @@ pre {
 				<a href="https://zerojudge.tw/UserStatistic?account=jiangsir">jiangsir</a> |
 			
 		
-		0/0 MB (100.0%) |
+				0/0 MB (100.0%) |
 		
 			<span>0ms</span>
 		
 		| -1 人上線 |
-		Queue:0<br> Powered by
+		Queue:0 | 148.763.10.0 |<br> Powered by
 		<a href="http://zerojudge.tw/" target="_blank">ZeroJudge</a>
-		<span title="[refs/heads/develop/3.5/Scripts@{0}] DownloadCSV">[refs/heads/develop/3.5/Scripts@{0}]</span> |
-		<span title="[refs/heads/devlop/3.5/TLEBreak@{0}] TLEBreak Default true">[refs/heads/devlop/3.5/TLEBreak@{0}]</span> | 000101
+		<span title="[refs/heads/develop/3.5.1/main@{0}] FEATURE:">[refs/heads/develop/3.5.1/main@{0}]</span> |
+		<span title="[refs/heads/develop/3.5.1/main@{0}] Merge commit &#39;5e18247ecf7ec751c4ba239aa645739e22eba3b4&#39; into develop/3.5.1/main">[refs/heads/develop/3.5.1/main@{0}]</span> | -48763
 	</div>
 </footer>
 
