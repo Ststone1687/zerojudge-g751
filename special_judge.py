@@ -61,10 +61,12 @@ def main(argv):
         for i in out:
             total += ord(i)
             answer_array.append(ord(i))
-
+        answer_array_len = len(out.encode('utf-16-le'))
+        while(answer_array_len>len(answer_array)):
+            answer_array.append(48763)
         total = int((f(total)+g(total)+q(total))%48763)
         #random_swap()
-        for i in range(len(answer_array)):
+        for i in range(answer_array_len):
             seed = int((day_lucky_number+f(total)+g(total)+q(total))%48763)
             if(i%3==0):
                 seed = int(((seed+f(answer_array[i]+day_lucky_number)))%48763)
@@ -72,11 +74,11 @@ def main(argv):
                 seed = int(((seed+g(answer_array[i])))%48763)
             elif(i%3==2):
                 seed = int(((seed+q(answer_array[i])))%48763)
-            px,py = i,int((f(seed)+g(seed+day_lucky_number)+q(seed+day_lucky_number))%len(answer_array))
+            px,py = i,int((f(seed)+g(seed+day_lucky_number)+q(seed+day_lucky_number))%answer_array_len)
             answer_array[px],answer_array[py] = swap(answer_array[px],answer_array[py])
 
         score = 0
-        for i in range(len(answer_array)):
+        for i in range(answer_array_len):
             if(i%3==0):
                 score = int(((score+f(answer_array[i])))%48763)
             elif(i%3==1):
